@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101820" />
+  <meta name="description" content="Portfolio of Jefa John Kombo — digital media professional, creative technologist, and coding and robotics educator based in Kenya." />
+  <meta property="og:title" content="Jefa John Kombo | Creative Technologist & Media Professional" />
+  <meta property="og:description" content="Visual storytelling, digital production, coding, robotics and technology education." />
+  <title>Jefa John Kombo | Creative Technologist & Media Professional</title>
+  <style>
+    :root {
+      --ink: #101820; --ink-soft: #182630; --paper: #f4f1e9; --white: #fffefa;
+      --muted: #aab5b8; --teal: #54d6c5; --orange: #ff9c55; --line: rgba(255,255,255,.13);
+      --dark-line: rgba(16,24,32,.13); --radius: 22px; --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--teal); text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 800; }
+    .eyebrow:before { content: ""; width: 24px; height: 2px; background: currentColor; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(16,24,32,.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); color: white; }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 900; letter-spacing: -.04em; font-size: 1.05rem; }
+    .brand span { color: var(--teal); }
+    .navlinks { display: flex; gap: 27px; align-items: center; font-size: .87rem; color: #d2d9d9; }
+    .navlinks a:hover { color: var(--teal); }
+    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 12px 18px; border-radius: 999px; font-size: .86rem; font-weight: 800; transition: transform .2s, background .2s; }
+    .nav-cta { background: var(--teal); color: var(--ink); }
+    .button:hover, .nav-cta:hover { transform: translateY(-2px); }
+    .hero { position: relative; overflow: hidden; background: var(--ink); color: white; padding: 94px 0 88px; }
+    .hero:before { content: ""; position: absolute; width: 570px; height: 570px; right: -150px; top: -230px; border: 1px solid rgba(84,214,197,.18); border-radius: 50%; box-shadow: 0 0 0 55px rgba(84,214,197,.025), 0 0 0 110px rgba(84,214,197,.02); }
+    .hero:after { content: ""; position: absolute; width: 250px; height: 250px; right: 11%; bottom: -190px; background: var(--orange); filter: blur(110px); opacity: .25; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 60px; }
+    h1 { max-width: 760px; margin: 22px 0 18px; font-size: clamp(3rem, 7vw, 6.3rem); line-height: .98; letter-spacing: -.075em; }
+    h1 em { color: var(--teal); font-style: normal; }
+    .hero-copy { max-width: 620px; color: #c2cccd; font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button.primary { background: var(--teal); color: var(--ink); }
+    .button.ghost { border: 1px solid rgba(255,255,255,.25); color: white; }
+    .hero-note { margin-top: 28px; color: #89999d; font-size: .8rem; }
+    .profile-art { min-height: 390px; display: grid; place-items: center; position: relative; }
+    .orbit { width: min(340px, 80vw); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(84,214,197,.35); display: grid; place-items: center; position: relative; }
+    .orbit:before, .orbit:after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; inset: 25px; }
+    .orbit:after { inset: 52px; border-color: rgba(255,156,85,.35); }
+    .initials { width: 190px; height: 190px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(145deg, #54d6c5, #ff9c55); color: var(--ink); font-size: 4rem; font-weight: 950; letter-spacing: -.1em; box-shadow: 0 20px 80px rgba(84,214,197,.2); }
+    .orbit-tag { position: absolute; background: #202f38; border: 1px solid var(--line); color: #e8eeee; border-radius: 999px; padding: 9px 13px; font-size: .73rem; font-weight: 750; }
+    .tag-one { top: 30px; right: -20px; } .tag-two { bottom: 38px; left: -25px; } .tag-three { bottom: 4px; right: 34px; }
+    .section { padding: 94px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 38px; }
+    h2 { font-size: clamp(2.2rem, 4vw, 3.7rem); line-height: 1.05; letter-spacing: -.065em; margin: 13px 0 0; }
+    .section-intro { max-width: 470px; color: #657176; margin: 0; }
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: start; }
+    .about-statement { font-size: 1.45rem; line-height: 1.42; letter-spacing: -.035em; font-weight: 650; }
+    .about-text { color: #59656a; }
+    .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 30px; }
+    .stat { border-top: 1px solid var(--dark-line); padding-top: 14px; }
+    .stat strong { display: block; font-size: 1.35rem; letter-spacing: -.05em; }
+    .stat span { color: #748086; font-size: .78rem; }
+    .dark-section { background: var(--ink); color: white; }
+    .dark-section .section-intro { color: #aab7b9; }
+    .dark-section .eyebrow { color: var(--orange); }
+    .focus-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .focus-card { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015)); min-height: 260px; }
+    .focus-icon { font-size: 1.8rem; margin-bottom: 22px; }
+    .focus-card h3 { margin: 0 0 10px; font-size: 1.45rem; letter-spacing: -.04em; }
+    .focus-card p { margin: 0; color: #aab7b9; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .chip { border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; color: #d6dfdf; font-size: .72rem; }
+    .projects { background: #eae7de; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 25px; }
+    .filter { cursor: pointer; border: 1px solid var(--dark-line); color: #4d595e; background: transparent; padding: 9px 14px; border-radius: 999px; font-size: .78rem; font-weight: 750; }
+    .filter.active, .filter:hover { background: var(--ink); color: white; border-color: var(--ink); }
+    .project-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 17px; }
+    .project-card { background: var(--white); border: 1px solid rgba(16,24,32,.08); border-radius: 18px; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 18px 35px rgba(16,24,32,.09); }
+    .project-art { height: 155px; display: grid; place-items: center; font-size: 3rem; position: relative; overflow: hidden; background: #14242b; }
+    .project-art:before { content: ""; position: absolute; width: 180px; height: 180px; border: 1px solid rgba(84,214,197,.35); border-radius: 50%; }
+    .project-art span { position: relative; z-index: 1; filter: drop-shadow(0 8px 12px rgba(0,0,0,.25)); }
+    .project-card:nth-child(3n+2) .project-art { background: #26343b; }
+    .project-card:nth-child(3n) .project-art { background: #30302c; }
+    .project-content { padding: 20px; }
+    .project-type { color: #0d8f83; font-size: .68rem; font-weight: 850; text-transform: uppercase; letter-spacing: .12em; }
+    .project-content h3 { margin: 7px 0 8px; font-size: 1.12rem; letter-spacing: -.035em; }
+    .project-content p { color: #667277; font-size: .86rem; margin: 0; }
+    .project-meta { margin-top: 15px; color: #899397; font-size: .72rem; }
+    .timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .timeline-item { padding: 24px 0 24px 22px; border-left: 2px solid #b9c8c4; position: relative; }
+    .timeline-item:before { content: ""; position: absolute; left: -7px; top: 30px; width: 12px; height: 12px; border-radius: 50%; background: var(--teal); border: 2px solid var(--paper); }
+    .timeline-date { color: #0d8f83; font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .timeline-item h3 { margin: 7px 0 5px; font-size: 1.15rem; }
+    .timeline-item p { margin: 0; color: #647075; font-size: .88rem; }
+    .timeline-item .role { color: #28363c; font-weight: 700; margin-bottom: 7px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+    .skill-box { border: 1px solid var(--line); border-radius: 15px; padding: 18px; background: rgba(255,255,255,.035); }
+    .skill-box h3 { font-size: .92rem; margin: 0 0 9px; color: var(--teal); }
+    .skill-box p { color: #aab7b9; font-size: .79rem; margin: 0; }
+    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .education-card { background: white; border-radius: 18px; padding: 25px; }
+    .education-card span { color: #0d8f83; font-size: .75rem; font-weight: 850; }
+    .education-card h3 { margin: 8px 0 5px; font-size: 1.12rem; }
+    .education-card p { color: #69757a; margin: 0; font-size: .87rem; }
+    .contact { background: var(--teal); padding: 76px 0; }
+    .contact-grid { display: flex; justify-content: space-between; align-items: center; gap: 35px; }
+    .contact h2 { max-width: 650px; }
+    .contact .eyebrow { color: #155c57; }
+    .contact .button { background: var(--ink); color: white; white-space: nowrap; }
+    footer { background: var(--ink); color: #aab7b9; padding: 25px 0; font-size: .78rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner strong { color: white; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .profile-art { min-height: 310px; }
+      .orbit { width: 275px; }
+      .initials { width: 155px; height: 155px; font-size: 3.3rem; }
+      .project-grid { grid-template-columns: repeat(2,1fr); }
+      .skills-grid { grid-template-columns: repeat(2,1fr); }
+      .section-head { display: block; }
+      .section-intro { margin-top: 18px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      .nav { min-height: 66px; }
+      .navlinks { display: none; }
+      .hero { padding: 70px 0 55px; }
+      h1 { font-size: clamp(3.1rem, 16vw, 5rem); }
+      .profile-art { min-height: 280px; }
+      .section { padding: 68px 0; }
+      .focus-grid, .project-grid, .timeline, .education-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 8px; }
+      .stat strong { font-size: 1.1rem; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { display: block; }
+      .contact .button { margin-top: 25px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior: auto !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">JEFA JOHN<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+      </div>
+      <a class="nav-cta" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid wrap">
+        <div>
+          <span class="eyebrow">Portfolio · Kenya</span>
+          <h1>Creating with purpose. <em>Building with technology.</em></h1>
+          <p class="hero-copy">I'm Jefa John Kombo — a digital media professional, creative technologist and coding & robotics educator. I bring ideas to life through visual storytelling, digital production and hands-on technology.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="button ghost" href="mailto:jefajohn1@gmail.com">Contact me <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note">Communications graduate · Media production · Coding & robotics education</p>
+        </div>
+        <div class="profile-art" aria-label="Jefa John Kombo initials graphic">
+          <div class="orbit">
+            <div class="initials">JK</div>
+            <span class="orbit-tag tag-one">Visual storytelling</span>
+            <span class="orbit-tag tag-two">Creative technology</span>
+            <span class="orbit-tag tag-three">Robotics & code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">A little about me</span><h2>Where creativity<br>meets innovation.</h2></div>
+        <p class="section-intro">A multidisciplinary approach to communication, creative production and technology education.</p>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-statement">I enjoy turning ideas into experiences people can see, understand and interact with.</div>
+        <div>
+          <p class="about-text">My background is in communications and digital media, with practical experience in videography, photography, editing, graphic design, documentaries and live event coverage. I have worked with organisations, a university studio and community initiatives to tell stories and create useful visual content.</p>
+          <p class="about-text">Alongside media production, I work in coding and robotics education. I develop practical learning experiences that introduce learners to programming, electronics, sensors, automation and problem-solving through projects.</p>
+          <div class="stat-row">
+            <div class="stat"><strong>Media</strong><span>Production & storytelling</span></div>
+            <div class="stat"><strong>Robotics</strong><span>Hands-on learning</span></div>
+            <div class="stat"><strong>Education</strong><span>Project-based teaching</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="expertise">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">What I do</span><h2>Two disciplines.<br>One creative mindset.</h2></div>
+          <p class="section-intro">I combine communication skills, technical curiosity and practical delivery to create work that informs, engages and solves problems.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card reveal">
+            <div class="focus-icon" aria-hidden="true">◉</div>
+            <h3>Digital Media & Creative Production</h3>
+            <p>From planning and capturing stories to editing and publishing finished content for organisations, events and digital platforms.</p>
+            <div class="chips"><span class="chip">Videography</span><span class="chip">Photography</span><span class="chip">Video editing</span><span class="chip">Graphic design</span><span class="chip">Live streaming</span><span class="chip">Audio editing</span></div>
+          </article>
+          <article class="focus-card reveal">
+            <div class="focus-icon" aria-hidden="true">⌘</div>
+            <h3>Coding, Robotics & Technology Education</h3>
+            <p>Designing practical, learner-friendly projects and lessons that connect code with physical computing and real-world applications.</p>
+            <div class="chips"><span class="chip">Arduino</span><span class="chip">mBlock 5</span><span class="chip">ESP32</span><span class="chip">Sensors & actuators</span><span class="chip">App Lab</span><span class="chip">CBC learning resources</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Selected work</span><h2>Projects & explorations.</h2></div>
+          <p class="section-intro">A selection of technology builds, learning projects and creative disciplines. Project descriptions reflect documented design and teaching work; individual build and testing records will be added as they are documented.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter" data-filter="robotics" aria-pressed="false">Robotics & electronics</button>
+          <button class="filter" data-filter="education" aria-pressed="false">Learning projects</button>
+          <button class="filter" data-filter="media" aria-pressed="false">Media</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>♻️</span></div><div class="project-content"><span class="project-type">Arduino · Physical computing</span><h3>Smart Dustbin</h3><p>An automated bin concept using an ultrasonic sensor and servo motor to open the lid when a person approaches.</p><div class="project-meta">Sensors · Servo control · Environmental awareness</div></div></article>
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>🚦</span></div><div class="project-content"><span class="project-type">Arduino · Beginner electronics</span><h3>Traffic Light System</h3><p>A practical introduction to digital output, LED connections, sequencing and the logic behind traffic signals.</p><div class="project-meta">LEDs · Resistors · Digital output</div></div></article>
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>🧼</span></div><div class="project-content"><span class="project-type">Automation · Arduino</span><h3>Smart Hand Washer</h3><p>A touchless hand-washing concept that uses proximity sensing to control a small water pump.</p><div class="project-meta">Ultrasonic sensor · Pump · Automation</div></div></article>
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>🚗</span></div><div class="project-content"><span class="project-type">Mobile robotics</span><h3>Obstacle Avoidance Car</h3><p>An educational robot-car project introducing motor control, distance sensing and autonomous movement.</p><div class="project-meta">Arduino Uno · Motor driver · Ultrasonic sensor</div></div></article>
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>💧</span></div><div class="project-content"><span class="project-type">Smart systems</span><h3>Smart Pumping System</h3><p>A water-level control project exploring how sensors and a switching system can automate pump operation.</p><div class="project-meta">Level sensing · Relay · Water pump</div></div></article>
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>🧴</span></div><div class="project-content"><span class="project-type">Automation · School project</span><h3>Smart Dispenser</h3><p>A touch-free dispensing system designed to demonstrate sensor input and controlled actuation.</p><div class="project-meta">Ultrasonic sensor · Relay · Pump</div></div></article>
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>🔥</span></div><div class="project-content"><span class="project-type">Robotics · Sensing</span><h3>Fire Extinguisher Robot</h3><p>A learning project exploring flame detection and motorised response using a robot platform.</p><div class="project-meta">Flame sensor · Motor driver · Fan</div></div></article>
+          <article class="project-card reveal" data-category="robotics education"><div class="project-art"><span>🅿️</span></div><div class="project-content"><span class="project-type">Embedded systems</span><h3>Car Parking System</h3><p>An automated parking barrier concept using distance detection and servo movement.</p><div class="project-meta">Ultrasonic sensor · Servo · Arduino</div></div></article>
+          <article class="project-card reveal" data-category="robotics"><div class="project-art"><span>🔢</span></div><div class="project-content"><span class="project-type">Electronics · Display systems</span><h3>Four-Digit Seven-Segment Display</h3><p>Exploring digit patterns, multiplexing, place values and timer or clock display concepts.</p><div class="project-meta">Arduino · Seven-segment display · Digital logic</div></div></article>
+          <article class="project-card reveal" data-category="robotics"><div class="project-art"><span>📡</span></div><div class="project-content"><span class="project-type">Microcontrollers · Exploration</span><h3>ESP32 Experiments</h3><p>Explorations with light sensing, GPIO control and ESP32-CAM concepts for connected and vision-enabled projects.</p><div class="project-meta">ESP32 · LDR · ESP32-CAM</div></div></article>
+          <article class="project-card reveal" data-category="education"><div class="project-art"><span>📱</span></div><div class="project-content"><span class="project-type">App development education</span><h3>App Lab Learning Projects</h3><p>Planning a progressive, grade-based introduction to Android-style app development and computational thinking for learners.</p><div class="project-meta">Code.org App Lab · Grades 4–9 · CBC context</div></div></article>
+          <article class="project-card reveal" data-category="media"><div class="project-art"><span>🎬</span></div><div class="project-content"><span class="project-type">Creative production</span><h3>Video, Photography & Live Production</h3><p>Documentary, event and organisational media work spanning camera operation, post-production, graphics and livestreaming.</p><div class="project-meta">Premiere Pro · DaVinci Resolve · OBS · Wirecast</div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="experience">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Professional journey</span><h2>Experience that<br>shapes my work.</h2></div>
+        <p class="section-intro">Selected roles from my communications and media-production background, as recorded in my CV.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-date">February 2023 – Present</div><h3>Christian Fellowship Foundation</h3><p class="role">Videographer & Livestream Producer</p><p>Entrusted with livestreaming church events to social media platforms, primarily using Wirecast and OBS.</p></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2022</div><h3>Help a Child Face Tomorrow</h3><p class="role">Videography, Editing & Documentation</p><p>Captured video and photography during organisational missions, edited content using Premiere Pro and After Effects, and created visual designs using Illustrator and Photoshop.</p></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2021 – 2022</div><h3>Save a Life Community</h3><p class="role">Volunteer Videographer & Editor</p><p>Supported video production and editing for online channels and television programmes, using DaVinci Resolve.</p></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2018 – 2021</div><h3>Pan Africa Christian University</h3><p class="role">Assistant Studio Technician</p><p>Produced institutional adverts, supported live event coverage and photography, managed practical studio activities and helped students understand studio equipment.</p></article>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="wrap">
+        <div class="section-head reveal"><div><span class="eyebrow">Tools & capabilities</span><h2>My working toolkit.</h2></div><p class="section-intro">Software and technical areas drawn from my CV and the projects and learning resources I have worked on.</p></div>
+        <div class="skills-grid">
+          <div class="skill-box reveal"><h3>Video & Post-production</h3><p>Adobe Premiere Pro, DaVinci Resolve, Final Cut Studio, After Effects</p></div>
+          <div class="skill-box reveal"><h3>Design & Photography</h3><p>Adobe Photoshop, Illustrator, photography and visual design</p></div>
+          <div class="skill-box reveal"><h3>Live Production</h3><p>OBS Studio, Wirecast, event coverage and livestream workflows</p></div>
+          <div class="skill-box reveal"><h3>Audio</h3><p>Audio editing and production support</p></div>
+          <div class="skill-box reveal"><h3>Microcontrollers</h3><p>Arduino Uno, ESP32 and introductory embedded systems</p></div>
+          <div class="skill-box reveal"><h3>Robotics & Electronics</h3><p>Sensors, actuators, motors, relays, displays and physical computing</p></div>
+          <div class="skill-box reveal"><h3>Learning Platforms</h3><p>mBlock 5, Code.org App Lab and beginner-friendly coding activities</p></div>
+          <div class="skill-box reveal"><h3>Education Content</h3><p>Lesson planning, CBC-aligned resources, project guides and learner assessments</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="education">
+      <div class="section-head reveal"><div><span class="eyebrow">Education</span><h2>Learning & foundation.</h2></div></div>
+      <div class="education-grid">
+        <article class="education-card reveal"><span>2017 – 2023</span><h3>Pan Africa Christian University</h3><p>Bachelor of Arts in Communications</p></article>
+        <article class="education-card reveal"><span>2012 – 2015</span><h3>Kwale High School</h3><p>Kenya Certificate of Secondary Education (KCSE) · B-</p></article>
+      </div>
+      <p class="about-text" style="margin-top:22px">Languages: English (fluent), Kiswahili (fluent) and French (basic).</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div><span class="eyebrow">Have a project in mind?</span><h2>Let's create something meaningful.</h2><p>For media production, creative collaborations, technology education or robotics projects, get in touch.</p></div>
+        <a class="button" href="mailto:jefajohn1@gmail.com">jefajohn1@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>© <span id="year"></span> <strong>Jefa John Kombo</strong>. All rights reserved.</span><span>Designed to bring creativity and technology together.</span><a href="https://github.com/smartmedia-spec" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const filterButtons = document.querySelectorAll(".filter");
+    const cards = document.querySelectorAll(".project-card");
+    filterButtons.forEach(button => button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      filterButtons.forEach(item => { item.classList.toggle("active", item === button); item.setAttribute("aria-pressed", item === button ? "true" : "false"); });
+      cards.forEach(card => { card.hidden = filter !== "all" && !card.dataset.category.split(" ").includes(filter); });
+    }));
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); } }), { threshold: .08 });
+    document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
