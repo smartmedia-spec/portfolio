@@ -33,6 +33,15 @@ After a successful deployment, GitHub Pages will show the published website URL 
 
 https://smartmedia-spec.github.io/portfolio/
 
+## Dedicated project repositories
+
+The following repositories hold the technical documentation for selected robotics projects:
+
+- [Smart Dustbin](https://github.com/smartmedia-spec/Smart-Dustbin)
+- [Traffic Light System](https://github.com/smartmedia-spec/Traffic-Light-System)
+
+Each project README records its purpose, components, learning outcomes, and the evidence still required. Wiring, final code, photographs and test results will be added only after they are confirmed from the actual builds.
+
 ## Project evidence and accuracy
 
 Project cards currently describe project concepts, teaching resources and technical explorations discussed during portfolio preparation. They are not claims that every project has been fully assembled, tested or independently deployed. Add photographs, videos, circuit diagrams, source code, build notes and test results as evidence becomes available.
