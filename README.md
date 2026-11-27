@@ -39,6 +39,7 @@ The following repositories hold the technical documentation for selected robotic
 
 - [Smart Dustbin](https://github.com/smartmedia-spec/Smart-Dustbin)
 - [Traffic Light System](https://github.com/smartmedia-spec/Traffic-Light-System)
+- [Smart Hand Washer](https://github.com/smartmedia-spec/Smart-Hand-Washer)
 
 Each project README records its purpose, components, learning outcomes, and the evidence still required. Wiring, final code, photographs and test results will be added only after they are confirmed from the actual builds.
 
