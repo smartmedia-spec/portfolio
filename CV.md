@@ -1,17 +1,18 @@
 # Jefa John Kombo
 
-**Communications & Digital Media Professional | Creative Technologist | Coding & Robotics Educator**
+**Communications & Digital Media Professional | Web Development Educator | Creative Technologist | Coding & Robotics Educator**
 
 Nairobi, Kenya | +254 748 140 983 | jefajohn1@gmail.com | [GitHub](https://github.com/smartmedia-spec)
 
 ## Professional Profile
-Multidisciplinary communications and digital media professional with experience across video production, photography, post-production, graphic design, documentary storytelling, livestreaming and digital content management. Currently leads the Media and Robotics departments at Smart Brains Kenya, combining creative production and organisational communications with practical coding and robotics education. Develops learner-centred, project-based learning experiences using Arduino, mBlock 5, ESP32 and Code.org App Lab. Brings a communication-led approach to technical problem-solving, team coordination and the delivery of engaging content and learning experiences.
+Multidisciplinary communications and digital media professional with experience across video production, photography, post-production, graphic design, documentary storytelling, livestreaming and digital content management. Currently leads the Media and Robotics departments at Smart Brains Kenya, combining creative production and organisational communications with practical technology education. Teaches web development fundamentals using HTML, CSS and JavaScript, alongside coding and robotics. Develops learner-centred, project-based learning experiences using web technologies, Arduino, mBlock 5, ESP32 and Code.org App Lab. Brings a communication-led approach to technical problem-solving, team coordination and the delivery of engaging content and learning experiences.
 
 ## Core Competencies
 - **Media production:** Videography, photography, documentary production, camera operation, video editing
 - **Digital communications:** Content development, social media management, digital publishing, visual communication
 - **Live & event production:** Livestream coordination, OBS Studio, Wirecast, event and institutional coverage
 - **Creative design:** Graphic design, promotional materials, visual storytelling, audio editing
+- **Web development education:** Teaching HTML, CSS and JavaScript fundamentals through practical learner projects
 - **Technology education:** Coding and robotics instruction, project-based learning, CBC-aligned resources
 - **Physical computing:** Arduino Uno, ESP32, sensors, actuators, motors, relays and display systems
 
@@ -22,6 +23,7 @@ Multidisciplinary communications and digital media professional with experience 
 - Lead the organisation’s media and robotics department activities, supporting content development, media operations and communications.
 - Plan and produce digital content, including promotional graphics, photography and video coverage, and coordinate social media publishing.
 - Teach coding and robotics in schools and learning institutions, including Strathmore University, using practical, learner-centred activities.
+- Teach web development fundamentals in HTML, CSS and JavaScript, guiding learners through website structure, styling and basic interactivity.
 - Develop project guides, teacher resources and hands-on learning experiences using Arduino Uno, mBlock 5, ESP32, sensors, actuators and Code.org App Lab.
 
 ### Videographer & Livestream Producer — Christian Fellowship Foundation
@@ -66,6 +68,7 @@ Representative projects and educational explorations featured in the professiona
 - **Video & post-production:** Adobe Premiere Pro, DaVinci Resolve, Final Cut Studio, Adobe After Effects
 - **Design & photography:** Adobe Photoshop, Adobe Illustrator, photography and visual design
 - **Live production:** OBS Studio, Wirecast, camera operation and livestream workflows
+- **Web development:** HTML5, CSS3 and JavaScript fundamentals
 - **Coding & physical computing:** Arduino Uno, ESP32, mBlock 5, Code.org App Lab, sensors and actuators
 - **Education resources:** CBC-aligned lesson planning, project guides, learning activities and assessments
 
